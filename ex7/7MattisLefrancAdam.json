@@ -1,0 +1,14 @@
+[
+  {
+    _id: ObjectId('69f1e7bf10d4150a72dc7cd4'),
+    name: 'Bob',
+    age: 31,
+    email: 'bob@example.com'
+  },
+  {
+    _id: ObjectId('69f1f14410d4150a72dc7cd7'),
+    name: 'Alice',
+    age: 25,
+    email: 'alice@example.com'
+  }
+]

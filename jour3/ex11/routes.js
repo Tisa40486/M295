@@ -3,16 +3,16 @@ const express = require("express");
 const router = express.Router();
 const authenticateUser = require("./middleware/authenticate")
 
-router.post("/", authenticateUser, (req,res) => {
-    try{
+router.post("/", authenticateUser, (req, res) => {
+    try {
         const input = new productSchema(req.body);
         const products = input.save();
         res.json(products);
         console.log("Post done succesfully");
     }
-    catch(err){
-        res.status(500).json({message : err.message})
-        console.log({message : err.message})
+    catch (err) {
+        res.status(500).json({ message: err.message })
+        console.log({ message: err.message })
     }
 });
 
@@ -41,7 +41,7 @@ router.put("/:id", authenticateUser, (req, res) => {
         }
 
         const updatedProduct = product.save();
-        
+
         res.json(updatedProduct);
         console.log("Update done succesfully");
 
